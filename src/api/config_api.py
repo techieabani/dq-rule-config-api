@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException, status
 from pydantic import BaseModel
+from typing import Optional
 from src.utils.logger import setup_logger
 
 logger = setup_logger("DQ_RULE_CONFIG_API")
@@ -11,8 +12,8 @@ app = FastAPI(title="Rule Configuration API")
 # -------------------------
 
 class AttributeRuleInfo(BaseModel):
-    baseline_value: float
-    threshold_value: float
+    baseline_value: Optional[float] = None
+    threshold_value: Optional[float] = None
     
 class AttributeInfo(BaseModel):
     column_name: str
