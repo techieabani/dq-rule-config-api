@@ -17,6 +17,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 # Clone and enter the repo
 git clone <repository-url>
+
 cd dq-rule-config-api
 
 # Create a virtual environment (.venv)
